@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-dotenv = "*"
+sqlalchemy = "*"
+flask = "*"
+pymysql = "*"
+requests = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+init_db = "py init.py"
+main = "py api.py"
+test = "py test.py"
