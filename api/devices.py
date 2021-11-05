@@ -67,13 +67,3 @@ def delete_device(device_id):
     session.commit()
 
     return jsonify(None), 204
-
-
-@devices.errorhandler(400)
-@devices.errorhandler(403)
-@devices.errorhandler(404)
-def error_handler(error):
-    return jsonify({'error': {
-        'code': error.description['code'],
-        'message': error.description['message']
-    }}), error.code

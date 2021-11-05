@@ -67,13 +67,3 @@ def delete_user(user_id):
     session.commit()
 
     return jsonify(None), 204
-
-
-@users.errorhandler(400)
-@users.errorhandler(403)
-@users.errorhandler(404)
-def error_handler(error):
-    return jsonify({'error': {
-        'code': error.description['code'],
-        'message': error.description['message']
-    }}), error.code
