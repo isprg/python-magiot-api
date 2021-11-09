@@ -13,6 +13,4 @@ response = requests.post(
     headers={"Content-Type": "application/json"},
     data=json.dumps(json_data)
 )
-
-res_data = response.json()
-print(response)
+print(response.json())

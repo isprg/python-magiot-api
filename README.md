@@ -1,3 +1,23 @@
+# ディレクトリ構造
+
+```
+│  .env        - DB接続設定
+│  .env.sample - .envのサンプル
+│  api.py      - APIサーバー起動
+│  init.py     - DBテーブル初期化/更新
+│  sample.py   - requestsライブラリを利用したAPIの叩き方サンプル
+│
+└─api
+    │  devices.py  - /devices のルーティング
+    │  users.py    - /users のルーティング
+    │  __init__.py - ルーティングの追加とエラーハンドリング
+    │
+    └─models
+            config.py  - DBへの接続，セッション作成
+            devices.py - DBモデル(devicesテーブル)
+            users.py   - DBモデル(usersテーブル)
+```
+
 # 環境設定
 
 ## ライブラリの依存関係をインストール
@@ -253,7 +273,7 @@ Response
 {
   "id": 1,
   "name": "root",
-  "rfid": 0x45
+  "rfid": "0x45"
 }
 ```
 
